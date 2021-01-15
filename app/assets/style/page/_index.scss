@@ -1,0 +1,68 @@
+.banner {
+    @include banner("../images/banner.jpg", calc(100vh - 56px));
+    background-position: left center;
+    background-attachment: fixed;
+    & .btn-shop {
+        width: 100%;
+    }
+}
+/*--------------------------------*/
+
+.chanel-plan {
+    height: 680px;
+    width: 100%;
+}
+.chanel .btn-index {
+    font-size: 20px;
+}
+.chanel .btn-plan {
+    width: 100%;
+}
+@include pad {
+    .chanel-pic {
+        width: 555px;
+        height: 555px;
+    }
+    .chanel-plan {
+        height: 1080px;
+    }
+    .chanel .text {
+        width: 80%;
+    }
+    .plan-text {
+        width: 90%;
+    }
+}
+@include desktop {
+    .chanel .text {
+        width: 62%;
+    }
+    .plan-text {
+        width: 70%;
+    }
+}
+/*--------------------------------*/
+.sold-img {
+    overflow: hidden;
+    & .card-img-top {
+        transform: scale(1,1);
+        transition: all 1s ease-out;
+    }
+    & .card-img-top:hover {
+        transform: translateY(-50px) scale(1.2,1.2);
+    }
+}
+
+/*--------------------------------*/
+.bottle-pic {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+

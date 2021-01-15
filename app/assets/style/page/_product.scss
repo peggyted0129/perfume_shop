@@ -1,0 +1,52 @@
+.product-pic {
+    object-position: center;
+    height: 165px;
+    width: 100%;
+}
+@include smobile {
+    .product-pic {
+        height: 220px;
+    }
+}
+@include mobile {
+    .product-pic {
+        height: 255px;
+    } 
+}
+@include pad {
+    .product-pic {
+        height: 200px;
+    }
+}
+@include desktop {
+    .product-pic {
+        height: 255px;
+    }
+}
+
+.product-link {
+    position: relative;
+}
+.product-link:after {
+    content: '';
+    @include align-center;
+    background: rgba(0, 0, 0, .6);
+    opacity: 0;
+    transition: .2s;
+}
+.product-link:before {
+    content: '查看更多';
+    @include position-center;
+    color: $white;
+    z-index: 2;
+    opacity: 0;
+    transition: .4s;
+}
+.product-link:hover {
+    &:after {
+        opacity: 1;
+    }
+    &:before {
+        opacity: 1;
+    }
+}
